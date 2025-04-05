@@ -192,7 +192,6 @@ func mergeSortParallele(tableau []int, N int) []int {
 	return tabsTriés[0]
 }
 
-// Tri simple pour les petites parties
 func triSimple(tableau []int) []int {
 	if len(tableau) <= 1 {
 		return tableau
@@ -205,7 +204,6 @@ func triSimple(tableau []int) []int {
 	return fusionner(gauche, droite)
 }
 
-// Fonction pour fusionner deux tableaux triés
 func fusionner(gauche, droite []int) []int {
 	resultat := make([]int, 0, len(gauche)+len(droite))
 	i, j := 0, 0
@@ -220,7 +218,6 @@ func fusionner(gauche, droite []int) []int {
 		}
 	}
 
-	// Ajouter les éléments restants
 	resultat = append(resultat, gauche[i:]...)
 	resultat = append(resultat, droite[j:]...)
 
