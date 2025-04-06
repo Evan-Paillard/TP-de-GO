@@ -1026,21 +1026,21 @@ func main() {
 	spp := 4 
 	
 
-	fmt.Println("Rendu de l'image de base...")
+	fmt.Println("Rendu de l'image de base.")
 	renderFrame(image, camera, scene)
 	image.save("output_basic.png")
 	
 	// Rendu avec Monte Carlo
-	fmt.Println("Rendu de l'image avec Monte Carlo...")
+	fmt.Println("Rendu de l'image avec Monte Carlo.")
 	renderFrameMonteCarlo(image, camera, scene, spp)
 	image.save("output_montecarlo.png")
 	
 	
 	// Option serveur
-	startServer("tcp", "8080", width, height, camera, scene, spp)
+	// startServer("tcp", "8080", width, height, camera, scene, spp)
 	
 	// Option client
-	startClient("localhost:8080", "tcp", 4, spp)
+	// startClient("localhost:8080", "tcp", 4, spp)
 	
-	fmt.Println("Terminer avec succès!")
+	fmt.Println("Terminer avec succès")
 }
